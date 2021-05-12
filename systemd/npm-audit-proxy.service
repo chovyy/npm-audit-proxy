@@ -1,0 +1,14 @@
+[Unit]
+Description=npm-audit-proxy
+After=syslog.target
+
+[Service]
+User=npmap
+# optionally append --server.port=<port> (default: 8082)
+ExecStart=/usr/bin/java -jar /opt/npm-audit-proxy/npm-audit-proxy.jar 
+SuccessExitStatus=143
+StandardOutput=append:/var/log/npm-audit-proxy.log
+StandardError=append:/var/log/npm-audit-proxy.log
+
+[Install]
+WantedBy=multi-user.target
