@@ -1,5 +1,9 @@
 # npm-audit-proxy
 
+**UPDATE: You don't need this, see: https://stackoverflow.com/questions/68757527/configure-local-proxy-for-the-npm-audit-with-apache**
+
+---------------------------------
+
 Proxy for the [`npm audit`](https://docs.npmjs.com/cli/v7/commands/npm-audit) API on https://registry.npmjs.org/. Web application that redirects all calls to `/-/npm/v1/security/audits` to https://registry.npmjs.org/-/npm/v1/security/audits.
 
 This is particular useful in cases where you have a private proxy registry for npm that does not support `npm audit`, such as [Nexus Repository OSS](https://de.sonatype.com/products/repository-oss). 
